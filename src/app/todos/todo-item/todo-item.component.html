@@ -2,7 +2,9 @@
 <li [ngClass]="{completed: todo.concluido}" [ngClass]="{editing: editando}">
     <div class="view">
         <input class="toggle" [formControl]="chkConcluido" type="checkbox">
-        <label (dblclick)="editar()">{{ todo.texto }}</label>
+        <label *ngIf="!todo.concluido" (dblclick)="editar()">{{ todo.texto }}</label>
+        <label *ngIf="todo.concluido" (dblclick)="editar()"
+            style="text-decoration: line-through;">{{ todo.texto }}</label>
         <button class="destroy" (click)="apagar()"></button>
     </div>
     <input #Input class="edit" (blur)="finalizarEdicao()" [formControl]="txtInput" type="text">

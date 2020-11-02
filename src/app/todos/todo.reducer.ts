@@ -4,11 +4,10 @@ import * as Actions from './todo.actions';
 import { Todo } from '../models/todo.model';
 
 export const initialState: Todo[] = [
-  new Todo('Salvar o mundo'),
-  new Todo('Vencer o Thanos'),
-  new Todo('Consertar Traje'),
-  new Todo('Roubar escudo do Capitão'),
-  new Todo('Pregar peça no Coringa'),
+  new Todo('Estudar JavaScript'),
+  new Todo('Levar o cachorro pra passear'),
+  new Todo('Comprar Maçãs'),
+  new Todo('Lavar Louças'),
 ];
 
 /**
@@ -67,7 +66,7 @@ const _todoReducer = createReducer(
       };
     });
   }),
-  on(Actions.apagarTudo, (state) => state.filter((todo) => !todo.concluido)),
+  on(Actions.apagarTudo, (state) => state.filter((todo) => !todo.concluido))
 );
 
 export function todoReducer(state, action) {
