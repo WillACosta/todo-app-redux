@@ -5,6 +5,8 @@
 
 Aplicação lista de tarefas desenvolvida em angular utilizando o NGRx para gerenciamento de estados.
 
+Veja a aplicação [aqui](willacosta.github.io/todo-redux-app/).
+
 ## Construído com
 
 - Angular
